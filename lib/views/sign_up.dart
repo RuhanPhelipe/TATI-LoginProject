@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:go_router/go_router.dart';
 
-import 'package:flutter/material.dart';
 import 'package:tati0814/common/errors/errors_classes.dart';
 import 'package:tati0814/common/errors/errors_messagens.dart';
 import 'package:tati0814/common/routes/routes.dart';
@@ -11,7 +10,6 @@ import 'package:tati0814/common/validators/empty_str_validator.dart';
 import 'package:tati0814/common/validators/min_lenght_str_validator.dart';
 import 'package:tati0814/common/validators/text_field_validator.dart';
 import 'package:tati0814/components/input_text_field.dart';
-import 'package:tati0814/views/home.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -46,6 +44,8 @@ class _SignUpState extends State<SignUp> {
   final _confirmPasswordFieldKey = GlobalKey<FormFieldState>();
   final _confirmPasswordFieldController = TextEditingController();
   final _confirmPasswordFieldFocusNode = FocusNode();
+
+  final _signUpButtonFocusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
@@ -132,9 +132,9 @@ class _SignUpState extends State<SignUp> {
               InputTextField(
                   textEditingController: _emailFieldController,
                   label: 'Email',
-                  icon: Icons.lock_person_rounded,
+                  icon: Icons.email_rounded,
                   onFieldSubmitted: (value) {
-                    if (!_nameFieldKey.currentState!.validate()) {
+                    if (!_emailFieldKey.currentState!.validate()) {
                       FocusScope.of(context).requestFocus(_emailFieldFocusNode);
                     } else {
                       _emailFieldFocusNode.unfocus();
@@ -165,7 +165,7 @@ class _SignUpState extends State<SignUp> {
               InputTextField(
                   textEditingController: _cellFieldController,
                   label: 'Telefone',
-                  icon: Icons.lock_person_rounded,
+                  icon: Icons.phone,
                   onFieldSubmitted: (value) {
                     if (!_cellFieldKey.currentState!.validate()) {
                       FocusScope.of(context).requestFocus(_cellFieldFocusNode);
@@ -255,6 +255,14 @@ class _SignUpState extends State<SignUp> {
                       return e.toString();
                     }
                   }),
+              const SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                focusNode: _signUpButtonFocusNode,
+                onPressed: () {},
+                child: const Text('Confirmar'),
+              )
             ],
           ),
         ),

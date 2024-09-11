@@ -15,8 +15,15 @@ class DefaultError extends Failure {
   // String toString() => 'DefaultError(msg: $msg)';
 }
 
-class PetNotFound extends Failure {
-  PetNotFound([String msg = MessagesError.defaultError]) : super(msg);
+class UserNotFound extends Failure {
+  UserNotFound([String msg = MessagesError.userNotFound]) : super(msg);
+
+  // @override
+  // String toString() => 'DefaultError(msg: $msg)';
+}
+
+class UserWrongPassword extends Failure {
+  UserWrongPassword([String msg = MessagesError.userWrongPassword]) : super(msg);
 
   // @override
   // String toString() => 'DefaultError(msg: $msg)';
