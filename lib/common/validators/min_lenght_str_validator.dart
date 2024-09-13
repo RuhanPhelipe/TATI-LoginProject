@@ -1,6 +1,6 @@
-import 'package:tati0814/common/errors/errors_classes.dart';
-import 'package:tati0814/common/errors/errors_messagens.dart';
-import 'package:tati0814/common/validators/base_validator.dart';
+import '../errors/errors_classes.dart';
+import '../errors/errors_messagens.dart';
+import 'base_validator.dart';
 
 final class MinLengthStrValidator extends BaseValidator<String?> {
   final int minLength;

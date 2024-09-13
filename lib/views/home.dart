@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:go_router/go_router.dart';
 
-import 'package:tati0814/common/errors/errors_classes.dart';
-import 'package:tati0814/common/errors/errors_messagens.dart';
-import 'package:tati0814/common/routes/routes.dart';
-import 'package:tati0814/common/validators/empty_str_validator.dart';
-import 'package:tati0814/common/validators/min_lenght_str_validator.dart';
-import 'package:tati0814/common/validators/text_field_validator.dart';
-import 'package:tati0814/components/input_text_field.dart';
+import '../common/errors/errors_classes.dart';
+import '../common/errors/errors_messagens.dart';
+import '../common/routes/routes.dart';
+import '../common/validators/empty_str_validator.dart';
+import '../common/validators/min_lenght_str_validator.dart';
+import '../common/validators/text_field_validator.dart';
+import '../components/input_text_field.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -55,6 +54,7 @@ class _HomeState extends State<Home> {
         child: Scaffold(
           body: Center(
             child: Form(
+              key: _formKey,
               child: SafeArea(
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

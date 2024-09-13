@@ -1,4 +1,4 @@
-import 'package:tati0814/common/validators/base_validator.dart';
+import 'base_validator.dart';
 
 class TextFieldValidator {
   final List<BaseValidator> _validators;

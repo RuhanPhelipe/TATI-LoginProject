@@ -1,6 +1,7 @@
-import 'package:tati0814/views/home.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tati0814/views/sign_up.dart';
+
+import '../../views/sign_up.dart';
+import '../../views/home.dart';
 
 abstract class RoutesApp {
   static final Route home = Route(name: 'home', path: '/');

@@ -1,10 +1,10 @@
 class User {
   final int? id;
-  final String login;
-  final String name;
-  final String email;
-  final String cell;
-  final String password;
+  final String? login;
+  final String? name;
+  final String? email;
+  final String? cell;
+  final String? password;
 
   User({
     this.id,

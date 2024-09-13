@@ -1,9 +1,9 @@
+
 import '../../domain/entity/user.dart';
-import '../../presentation/state/user_list_state.dart';
-import '../../presentation/state/user_state.dart';
+import '../../presentation/asp/user_atom.dart';
 
 abstract interface class IUserApiService {
-  Future<UserState> singUp(User user);
-  Future<UserState> singIn(String login, String password);
+  Future<UserStore> singUp(User user);
+  Future<UserStore> singIn(String login, String password);
 }
 
